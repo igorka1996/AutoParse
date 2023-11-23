@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import axios from 'axios';
 // import * as crypto from 'crypto';
 
@@ -28,6 +29,7 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
+app.use(cors());
 
 app.post('/copart-proxy', async (req, res) => {
     const url = 'https://www.copart.com/public/lots/vehicle-finder-search-results';
