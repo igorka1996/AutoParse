@@ -34,7 +34,7 @@ app.use(cors());
 app.post('/copart-proxy', async (req, res) => {
     const url = 'https://www.copart.com/public/lots/vehicle-finder-search-results';
     try {
-        const response = await axios.post(url, req.body,{
+        const response = await axios.post(url,{
             backUrl: "",
             defaultSort: false,
             displayName: "",
